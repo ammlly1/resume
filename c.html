@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .glavnyi{
+        text-align: center;
+        margin-top: 50px;
+    }
+    #colorSmotret{
+        border: 3px solid black;
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+        border-radius: 15%;
+    }
+</style>
+<body>
+
+
+    <div class="glavnyi"> 
+        <h1>Уникальные цвета</h1>
+        <input type="color" id="colorPik">
+        <div id="colorSmotret"></div>
+    </div>
+
+<script>
+    let colorPik = document.getElementById("colorPik")
+    let asd = document.getElementById("colorSmotret")
+
+    colorPik.addEventListener('input', () =>{
+        let vubranColor = colorPik.value 
+        asd.style.backgroundColor = vubranColor
+        asd.textContent = vubranColor
+    })
+
+
+</script>
+
+</body>
+</html>

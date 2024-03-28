@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>калькулятор</title>
+</head>
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #8B0000;
+}
+
+.kalkulyator{
+    text-align: center;
+
+}
+
+
+
+    input {
+        width: 150px;
+        height: 35px;
+        padding: 5px;
+    }
+
+    button {
+        width:40px;
+        height:40px;
+        font-weight: 100px;
+        margin: 5px;
+    }
+
+.operator {
+    background-color: #f08080; 
+}
+
+.minus {
+    background-color: #B22222;
+}
+
+.yh {
+    background-color: #DC143C;
+}
+</style>
+<body>
+    <div class="kalkulyator">
+    <input type="text" id="display">
+<br> 
+        <button onclick="fat ('1')">1</button>
+        <button onclick="fat ('2')">2</button>
+        <button onclick="fat ('3')">3</button>
+        <button class="operator"onclick="fat ('+')">+</button>
+<br>
+        <button onclick="fat ('4')">4</button>
+        <button onclick="fat ('5')">5</button>
+        <button onclick="fat ('6')">6</button>
+        <button class="operator"onclick="fat ('-')">-</button>
+<br>
+        <button onclick="fat ('7')">7</button>
+        <button onclick="fat ('8')">8</button>
+        <button onclick="fat ('9')">9</button>
+        <button class="yh"onclick="fat ('*')">*</button>
+<br>
+        <button onclick="fat ('0')">0</button>
+        <button class="minus"onclick=" udalit ()" >c</button>
+        <button class="minus" onclick="ravno ()">=</button>
+        <button class="yh" onclick="fat ('/')">/</button>
+<br>         
+    </div>
+    
+    <script>
+        let display = document.getElementById ('display')
+        function fat(value) {
+            display.value = display.value + value
+        }
+
+        function ravno(){
+        try{
+            display.value = eval(display.value)
+        }
+        catch{
+            display.value = 'ОШИБКА'
+        }
+    }
+        
+         function udalit ()  {
+            display.value = ''
+         }
+    </script>
+</body>
+</html>
